@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Big Graph Platforms</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <!--<link rel="stylesheet" href="/css/syntax.css">-->
+
+        <!-- Custom CSS -->
+        <!--<link rel="stylesheet" href="/css/main.css">-->
+	<link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css">
+	<link href="/css/starter-template.css" rel="stylesheet">
+
+    </head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Big Graph Analytics</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <!--<li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h2>Big Graph Analytical Platforms</h2>
+
+<p>Here we try to make a list of all systems targeting big graph analytics. All systems appear in some academic papers at some point. Open source implementations are preferred.
+We annotate each system with links, paper and some highlights.
+Please let us know if something is missing. We appreciate it a lot.</p>
+
+<p>We view analytical platforms as in two categories, programming platforms and graph databases. The line between the two is bluring. Programming platforms interact with user via programming languages (scripts), therefore are much more flexible. Graph databases achieve that via graph query languages, in a more controled, concise way. Declarative languages may play a bigger role in the field later, but only with the functionalities (such as aggregation) added; just like what happend in OLAP systems.</p>
+
+<h3>Programming Platforms</h3>
+
+<p>Major players in the field are MapReduce model and vertex-centric programming model.</p>
+
+<h4>MapReduce</h4>
+
+<p>Though many people argue that MR is not the suitable platform for graph algorithms, MR is still the most common parallel infrastructure people have access to. The ability to handle billion node graph in a reasonable amount of time is good enough in many cases. Insights that are gained from designing in MR algorithms are certainly useful for other platforms (and vice versa).</p>
+
+<ul>
+<li>Hadoop
+
+<ul>
+<li>Definitely the biggest player in the field.</li>
+<li>White, Tom. Hadoop: the definitive guide. O&#39;Reilly, 2012.</li>
+</ul></li>
+<li>Spark
+
+<ul>
+<li>A full stack platform, from UC Berkeley. Also has a vertex-centric programming model.</li>
+<li>Zaharia, Matei, et al. &quot;Spark: cluster computing with working sets.&quot; Proceedings of the 2nd USENIX conference on Hot topics in cloud computing. 2010.</li>
+<li><a href="http://spark.incubator.apache.org/">link</a>, <a href="https://github.com/amplab">code</a></li>
+</ul></li>
+<li>Hyracks
+
+<ul>
+<li>A full stack platform, from UCI. Also has a vertex-centric programming model.</li>
+<li>Borkar, Vinayak, et al. &quot;Hyracks: A flexible and extensible foundation for data-intensive computing.&quot; Data Engineering (ICDE), 2011 IEEE 27th International Conference on. IEEE, 2011.</li>
+<li><a href="http://hyracks.org/">link</a></li>
+</ul></li>
+<li>Storm
+
+<ul>
+<li>from Twitter.</li>
+<li><a href="http://storm-project.net/">link</a></li>
+</ul></li>
+</ul>
+
+<h4>Vertex-Centric Programming</h4>
+
+<p>Vertex-centric programming is an natural way of expressing many graph algorithms.</p>
+
+<ul>
+<li><p>Pregel</p>
+
+<ul>
+<li>The inspiration of many others.</li>
+<li>Malewicz, Grzegorz, et al. &quot;Pregel: a system for large-scale graph processing.&quot;Proceedings of the 2010 ACM SIGMOD International Conference on Management of data. ACM, 2010.</li>
+</ul></li>
+<li><p>Giraph</p>
+
+<ul>
+<li>The Apache&#39;s answer to Pregel.</li>
+<li><a href="http://giraph.apache.org">link</a></li>
+<li>Ching, Avery, and C. Kunz. &quot;Giraph: Large-scale graph processing infrastructure on Hadoop.&quot; Hadoop Summit (2011).</li>
+</ul></li>
+<li><p>Mizan</p>
+
+<ul>
+<li>Khayyat, Zuhair, et al. &quot;Mizan: a system for dynamic load balancing in large-scale graph processing.&quot; Proceedings of the 8th ACM European Conference on Computer Systems. ACM, 2013.</li>
+<li><a href="http://thegraphsblog.wordpress.com/the-graph-blog/mizan/">link</a></li>
+</ul></li>
+<li><p>Grace</p>
+
+<ul>
+<li>single node multi-core</li>
+<li>Guozhang Wang, Wenlei Xie, Alan Demers, Johannes Gehrke. Asynchronous Large-Scale Graph Processing Made Easy. CIDR 2013. </li>
+<li><a href="http://www.cs.cornell.edu/bigreddata/grace/">link</a> </li>
+</ul></li>
+<li><p>GPS</p>
+
+<ul>
+<li>from Stanford</li>
+<li>S. Salihoglu and J. Widom. Optimizing Graph Algorithms on Pregel-like Systems. Technical Report, September 2013.</li>
+<li><a href="http://infolab.stanford.edu/gps/">link</a></li>
+</ul></li>
+<li><p>Signal-Collect</p>
+
+<ul>
+<li>Stutz, Philip, Abraham Bernstein, and William Cohen. &quot;Signal/collect: Graph algorithms for the (semantic) web.&quot; The Semantic Web–ISWC 2010. Springer Berlin Heidelberg, 2010. 764-780.</li>
+<li><a href="http://uzh.github.io/signal-collect/">link</a></li>
+</ul></li>
+<li><p>GraphLab and GraphChi</p>
+
+<ul>
+<li>very hot right now</li>
+<li>Low, Yucheng, et al. &quot;GraphLab: A New Framework For Parallel Machine Learning.&quot;</li>
+<li><a href="http://graphlab.org/">link</a></li>
+</ul></li>
+</ul>
+
+<h4>Platforms use Declarative Languages</h4>
+
+<ul>
+<li>SociaLite
+
+<ul>
+<li>SociaLite uses Datalog as the query language, and can implement many graph algorithms. It has both single machine and distributed version now.</li>
+<li>Seo, Jiwon, Stephen Guo, and Monica S. Lam. &quot;SociaLite: Datalog extensions for efficient social network analysis.&quot; Data Engineering (ICDE), 2013 IEEE 29th International Conference on. IEEE, 2013.</li>
+</ul></li>
+<li>More can be found at <a href="http://en.wikipedia.org/wiki/Graph_database#Distributed_Graph_Processing">Wikipedia</a></li>
+</ul>
+
+<h3>Graph Databases</h3>
+
+<p>Graph databases interacts with the user via graph query languages.</p>
+
+<ul>
+<li>Neo4j
+
+<ul>
+<li>Maybe the most popular graph database around.</li>
+<li><a href="http://www.neo4j.org/">link</a></li>
+</ul></li>
+<li>Faunus
+
+<ul>
+<li>tbd</li>
+<li><a href="http://thinkaurelius.github.io/faunus/">link</a> </li>
+</ul></li>
+<li>Many more from <a href="http://en.wikipedia.org/wiki/Graph_database#Graph_database_projects">Wikipedia</a></li>
+</ul>
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+        <!--<div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Big Graph Analytics</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Big Graph Analytical Platforms</h2>
+
+<p>Here we try to make a list of all systems targeting big graph analytics. All systems appear in some academic papers at some point. Open source implementations are preferred.
+We annotate each system with links, paper and some highlights.
+Please let us know if something is missing. We appreciate it a lot.</p>
+
+<p>We view analytical platforms as in two categories, programming platforms and graph databases. The line between the two is bluring. Programming platforms interact with user via programming languages (scripts), therefore are much more flexible. Graph databases achieve that via graph query languages, in a more controled, concise way. Declarative languages may play a bigger role in the field later, but only with the functionalities (such as aggregation) added; just like what happend in OLAP systems.</p>
+
+<h3>Programming Platforms</h3>
+
+<p>Major players in the field are MapReduce model and vertex-centric programming model.</p>
+
+<h4>MapReduce</h4>
+
+<p>Though many people argue that MR is not the suitable platform for graph algorithms, MR is still the most common parallel infrastructure people have access to. The ability to handle billion node graph in a reasonable amount of time is good enough in many cases. Insights that are gained from designing in MR algorithms are certainly useful for other platforms (and vice versa).</p>
+
+<ul>
+<li>Hadoop
+
+<ul>
+<li>Definitely the biggest player in the field.</li>
+<li>White, Tom. Hadoop: the definitive guide. O&#39;Reilly, 2012.</li>
+</ul></li>
+<li>Spark
+
+<ul>
+<li>A full stack platform, from UC Berkeley. Also has a vertex-centric programming model.</li>
+<li>Zaharia, Matei, et al. &quot;Spark: cluster computing with working sets.&quot; Proceedings of the 2nd USENIX conference on Hot topics in cloud computing. 2010.</li>
+<li><a href="http://spark.incubator.apache.org/">link</a>, <a href="https://github.com/amplab">code</a></li>
+</ul></li>
+<li>Hyracks
+
+<ul>
+<li>A full stack platform, from UCI. Also has a vertex-centric programming model.</li>
+<li>Borkar, Vinayak, et al. &quot;Hyracks: A flexible and extensible foundation for data-intensive computing.&quot; Data Engineering (ICDE), 2011 IEEE 27th International Conference on. IEEE, 2011.</li>
+<li><a href="http://hyracks.org/">link</a></li>
+</ul></li>
+<li>Storm
+
+<ul>
+<li>from Twitter.</li>
+<li><a href="http://storm-project.net/">link</a></li>
+</ul></li>
+</ul>
+
+<h4>Vertex-Centric Programming</h4>
+
+<p>Vertex-centric programming is an natural way of expressing many graph algorithms.</p>
+
+<ul>
+<li><p>Pregel</p>
+
+<ul>
+<li>The inspiration of many others.</li>
+<li>Malewicz, Grzegorz, et al. &quot;Pregel: a system for large-scale graph processing.&quot;Proceedings of the 2010 ACM SIGMOD International Conference on Management of data. ACM, 2010.</li>
+</ul></li>
+<li><p>Giraph</p>
+
+<ul>
+<li>The Apache&#39;s answer to Pregel.</li>
+<li><a href="http://giraph.apache.org">link</a></li>
+<li>Ching, Avery, and C. Kunz. &quot;Giraph: Large-scale graph processing infrastructure on Hadoop.&quot; Hadoop Summit (2011).</li>
+</ul></li>
+<li><p>Mizan</p>
+
+<ul>
+<li>Khayyat, Zuhair, et al. &quot;Mizan: a system for dynamic load balancing in large-scale graph processing.&quot; Proceedings of the 8th ACM European Conference on Computer Systems. ACM, 2013.</li>
+<li><a href="http://thegraphsblog.wordpress.com/the-graph-blog/mizan/">link</a></li>
+</ul></li>
+<li><p>Grace</p>
+
+<ul>
+<li>single node multi-core</li>
+<li>Guozhang Wang, Wenlei Xie, Alan Demers, Johannes Gehrke. Asynchronous Large-Scale Graph Processing Made Easy. CIDR 2013. </li>
+<li><a href="http://www.cs.cornell.edu/bigreddata/grace/">link</a> </li>
+</ul></li>
+<li><p>GPS</p>
+
+<ul>
+<li>from Stanford</li>
+<li>S. Salihoglu and J. Widom. Optimizing Graph Algorithms on Pregel-like Systems. Technical Report, September 2013.</li>
+<li><a href="http://infolab.stanford.edu/gps/">link</a></li>
+</ul></li>
+<li><p>Signal-Collect</p>
+
+<ul>
+<li>Stutz, Philip, Abraham Bernstein, and William Cohen. &quot;Signal/collect: Graph algorithms for the (semantic) web.&quot; The Semantic Web–ISWC 2010. Springer Berlin Heidelberg, 2010. 764-780.</li>
+<li><a href="http://uzh.github.io/signal-collect/">link</a></li>
+</ul></li>
+<li><p>GraphLab and GraphChi</p>
+
+<ul>
+<li>very hot right now</li>
+<li>Low, Yucheng, et al. &quot;GraphLab: A New Framework For Parallel Machine Learning.&quot;</li>
+<li><a href="http://graphlab.org/">link</a></li>
+</ul></li>
+</ul>
+
+<h4>Platforms use Declarative Languages</h4>
+
+<ul>
+<li>SociaLite
+
+<ul>
+<li>SociaLite uses Datalog as the query language, and can implement many graph algorithms. It has both single machine and distributed version now.</li>
+<li>Seo, Jiwon, Stephen Guo, and Monica S. Lam. &quot;SociaLite: Datalog extensions for efficient social network analysis.&quot; Data Engineering (ICDE), 2013 IEEE 29th International Conference on. IEEE, 2013.</li>
+</ul></li>
+<li>More can be found at <a href="http://en.wikipedia.org/wiki/Graph_database#Distributed_Graph_Processing">Wikipedia</a></li>
+</ul>
+
+<h3>Graph Databases</h3>
+
+<p>Graph databases interacts with the user via graph query languages.</p>
+
+<ul>
+<li>Neo4j
+
+<ul>
+<li>Maybe the most popular graph database around.</li>
+<li><a href="http://www.neo4j.org/">link</a></li>
+</ul></li>
+<li>Faunus
+
+<ul>
+<li>tbd</li>
+<li><a href="http://thinkaurelius.github.io/faunus/">link</a> </li>
+</ul></li>
+<li>Many more from <a href="http://en.wikipedia.org/wiki/Graph_database#Graph_database_projects">Wikipedia</a></li>
+</ul>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Please visit<br />
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/lgylym</a><br />
+              </p>
+            </div>
+          </div>
+        </div>-->
+
+    </body>
+</html>
