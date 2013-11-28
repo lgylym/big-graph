@@ -1,0 +1,5 @@
+name: Big Graph Analytics
+curl: http://lgylym.github.io/big-graph/
+markdown: redcarpet
+pygments: true
+destination: /home/lgylym/workspace/webpage/big-graph
