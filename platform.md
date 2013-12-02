@@ -19,6 +19,7 @@ Though many people argue that MR is not the suitable platform for graph algorith
 - Hadoop
   - Definitely the biggest player in the field.
   - White, Tom. Hadoop: the definitive guide. O'Reilly, 2012.
+  - Main Enterprise Distributions: Cloudera, HortonWork, MapR.
 - Spark
   - A full stack platform, from UC Berkeley. Also has a vertex-centric programming model.
   - Zaharia, Matei, et al. "Spark: cluster computing with working sets." Proceedings of the 2nd USENIX conference on Hot topics in cloud computing. 2010.
